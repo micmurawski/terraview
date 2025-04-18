@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terraform Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Terraform Infrastructure Visualizer</h1>
+      <div class="controls">
+        <button id="zoom-in">Zoom In</button>
+        <button id="zoom-out">Zoom Out</button>
+        <button id="reset-view">Reset View</button>
+      </div>
+    </header>
+    
+    <main>
+      <div class="diagram-container">
+        <svg id="diagram" width="100%" height="800"></svg>
+      </div>
+      
+      <div class="details-panel">
+        <div class="panel-header">
+          <h2>Resource Details</h2>
+          <button id="close-panel">×</button>
+        </div>
+        <div class="panel-content">
+          <div id="resource-details">
+            <p class="select-prompt">Select a resource to view details</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <div class="legend">
+      <h3>Resource Categories</h3>
+      <ul>
+        <li><span class="category-badge networking"></span> Networking</li>
+        <li><span class="category-badge compute"></span> Compute</li>
+        <li><span class="category-badge storage"></span> Storage</li>
+        <li><span class="category-badge database"></span> Database</li>
+        <li><span class="category-badge security"></span> Security</li>
+        <li><span class="category-badge other"></span> Other</li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
