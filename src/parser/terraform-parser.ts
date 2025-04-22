@@ -49,7 +49,7 @@ export class TerraformParser {
       }
       
       console.log(`Successfully parsed ${filePath}`);
-      console.log('Full parse result structure:', JSON.stringify(result[0], null, 2));
+      // console.log('Full parse result structure:', JSON.stringify(result[0], null, 2));
       return result[0];
     } catch (error) {
       console.error(`Error parsing ${filePath}:`, error);
